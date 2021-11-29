@@ -25,7 +25,30 @@ contract NFT is ERC721URIStorage {
         "UltraWide",
         "Baby",
         "Enormous",
-        "Micro"
+        "Micro",
+        "Immense",
+        "Sizeable",
+        "Substantial",
+        "Colossal",
+        "Great",
+        "Massive",
+        "Weighty",
+        "FuckingHuge",
+        "FuckingBig",
+        "FuckingSmall",
+        "FuckingTiny",
+        "FuckingMiniscule",
+        "FuckingUltraWide",
+        "FuckingBaby",
+        "FuckingEnormous",
+        "FuckingMicro",
+        "FuckingImmense",
+        "FuckingSizeable",
+        "FuckingSubstantial",
+        "FuckingColossal",
+        "FuckingGreat",
+        "FuckingMassive",
+        "FuckingWeighty"
     ];
     string[] colorSet = [
         "Black",
@@ -37,7 +60,29 @@ contract NFT is ERC721URIStorage {
         "Yellow",
         "Brown",
         "Green",
-        "Purple"
+        "Purple",
+        "Iridescant",
+        "Sparkling",
+        "DarkBlack",
+        "DarkWhite",
+        "DarkBeige",
+        "DarkRed",
+        "DarkBlue",
+        "DarkGrey",
+        "DarkYellow",
+        "DarkBrown",
+        "DarkGreen",
+        "DarkPurple",
+        "LightBlack",
+        "LightWhite",
+        "LightBeige",
+        "LightRed",
+        "LightBlue",
+        "LightGrey",
+        "LightYellow",
+        "LightBrown",
+        "LightGreen",
+        "LightPurple"
     ];
     string[] speciesSet = [
         "Jaguar",
@@ -50,7 +95,10 @@ contract NFT is ERC721URIStorage {
         "Cheetah",
         "Jungle Cat",
         "Leopard",
-        "Cat"
+        "Cat",
+        "EndangeredCheetah",
+        "EndangeredJungle Cat",
+        "EndangeredLeopard"
     ];
 
     // base SVG string all our dynamically-created NFTs are based off of.
@@ -61,6 +109,7 @@ contract NFT is ERC721URIStorage {
 
     function pickFirstRandomWord(uint256 tokenId)
         private
+        view
         returns (string memory)
     {
         uint256 rand = random(
@@ -72,6 +121,7 @@ contract NFT is ERC721URIStorage {
 
     function pickSecondRandomWord(uint256 tokenId)
         private
+        view
         returns (string memory)
     {
         uint256 rand = random(
@@ -83,6 +133,7 @@ contract NFT is ERC721URIStorage {
 
     function pickThirdRandomWord(uint256 tokenId)
         private
+        view
         returns (string memory)
     {
         uint256 rand = random(
