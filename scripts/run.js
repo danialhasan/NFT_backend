@@ -4,10 +4,13 @@ const main = async () => {
     await nftContract.deployed();
     console.log("Deployed contract to ", nftContract.address);
     let txn;
-    for (let index = 0; index <= 100; index++) {
+    // for (let index = 0; index <= 100; index++) {
+    //     txn = await nftContract.mintCatNFT();
+    //     await txn.wait();
+    // }
+
         txn = await nftContract.mintCatNFT();
         await txn.wait();
-    }
 };
 
 main()
